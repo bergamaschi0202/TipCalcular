@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCaucular.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Label
+                Text="  Has"
+                SemanticProperties.Description="Has"
+                />
+
+            <Entry
+                x:Name="Value"
+                Placeholder="Digite aqui o valor da refeição"
+                SemanticProperties.Description="Enter the Amount"
+                />
+
+            <Label
+                Text="  Tip"
+                SemanticProperties.Description="Tip"
+                />
+            <Label
+                x:Name="TipLabel"
+                Text="     R$ 0.00"
+                x:Name="Tip"/>
+
+            <Label
+                Text="  Total"
+                SemanticProperties.Description="Total"
+                />
+            <Label
+                x:Name="TotalLabel"
+                Text="     R$ 0.00"
+                x:Name="Total"/>
+
+
+            <Slider
+                x:Name="TipPercentage"
+                Minimum="0"
+                Maximum="100"
+                Value="15"
+                ValueChanged="OnTipPercentage_ValueChanged"
+                />
+            
+
+            <Button
+                x:Name="Percentage15"
+                Text="15"
+                Clicked="Percentage15_Clicked"
+                />
+
+            <Button
+                x:Name="Percentage30"
+                Text="30"
+                Clicked="Percentage30_Clicked"
+                />
+
+            <Button
+                x:Name="PercentageRoundDown"
+                Text="RoundDown"
+                Clicked="PercentageRoundDown_Clicked"
+                />
+
+            <Button
+                x:Name="PercentageRoundUp"
+                Text="RoundUp"
+                Clicked="PercentageRoundUp_Clicked"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
